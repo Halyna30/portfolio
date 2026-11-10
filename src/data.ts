@@ -93,7 +93,7 @@ const en: Content = {
     firstName: 'Halyna',
     roles: ['Frontend Developer', 'React & TypeScript', 'Accessibility advocate', 'SSR / CSR architect'],
     tagline:
-      'I build fast, accessible interfaces for high-traffic products — five years shipping search experiences used by millions of travellers across Europe.',
+      'I build fast, accessible interfaces for high-traffic products — for five years I've worked on search experiences used by millions of travellers across Europe.',
     ctaWork: 'See my work',
     ctaContact: 'Get in touch',
     location: 'Szczecin, Poland',
@@ -215,7 +215,7 @@ const pl: Content = {
     firstName: 'Halyna',
     roles: ['Frontend Developer', 'React & TypeScript', 'Dostępność (a11y)', 'Architektura SSR / CSR'],
     tagline:
-      'Tworzę szybkie i dostępne interfejsy dla produktów o dużym ruchu — od pięciu lat rozwijam wyszukiwarki, z których korzystają miliony podróżnych w całej Europie.',
+      'Tworzę szybkie i dostępne interfejsy dla produktów o dużym ruchu — od pięciu lat pracuję nad wyszukiwarkami, z których korzystają miliony podróżnych w całej Europie.',
     ctaWork: 'Zobacz projekty',
     ctaContact: 'Napisz do mnie',
     location: 'Szczecin, Polska',
@@ -337,7 +337,7 @@ const uk: Content = {
     firstName: 'Галина',
     roles: ['Frontend-розробниця', 'React & TypeScript', 'Доступність (a11y)', 'Архітектура SSR / CSR'],
     tagline:
-      'Створюю швидкі та доступні інтерфейси для високонавантажених продуктів — п’ять років розробляю пошук, яким користуються мільйони мандрівників по всій Європі.',
+      'Створюю швидкі та доступні інтерфейси для високонавантажених продуктів — п’ять років працюю над пошуком, яким користуються мільйони мандрівників по всій Європі.',
     ctaWork: 'Мої проєкти',
     ctaContact: 'Зв’язатися',
     location: 'Щецин, Польща',
