@@ -82,7 +82,7 @@ export const petProject = {
 
 const brands = ['lastminute.com', 'weg.de', 'bravofly.com', 'rumbo.com']
 const periods = { lm: '10.2021 — 09.2026', hydro: '01.2018 — 01.2019', mw: '10.2013 — 10.2014' }
-const lmTags = ['React', 'TypeScript', 'SSR/CSR', 'Material UI', 'Playwright', 'Jest', 'Nx']
+const lmTags = ['React 19', 'TypeScript', 'Nx', 'SSR/CSR', 'Styled Components', 'Material UI', 'Playwright', 'Jest', 'Storybook']
 const workTags = [
   ['React', 'TypeScript', 'SSR/CSR', 'REST API'],
   ['Material UI', 'Emotion', 'a11y', 'Storybook'],
@@ -135,10 +135,14 @@ const en: Content = {
         company: 'lastminute.com',
         place: 'Szczecin, Poland',
         points: [
-          'Co-developed a high-performance search ecosystem and widget for lastminute.com, weg.de, bravofly.com and rumbo.com.',
+          'Co-developed a shared search widget (flights, hotels, trains, package holidays) used across lastminute.com, weg.de, bravofly.com and rumbo.com, distributed as an npm package and CDN bundle with SSR support.',
           'Built reusable React components and contributed to hybrid (SSR/CSR) architectures integrated with REST APIs.',
-          'Co-created accessible UIs with Material UI, ensuring compliance with the European Accessibility Act (EAA).',
-          'Helped establish E2E and unit testing pipelines (Playwright, Jest) to keep quality and stability high.',
+          'Migrated core UI components from Emotion to Styled Components while keeping public APIs and consumer contracts intact.',
+          'Co-created accessible UIs (EAA/WCAG): ARIA live announcements, focus management for validation errors, inert for modals and accessible form controls.',
+          'Migrated the legacy E2E suite to Playwright and extended unit and integration coverage with Jest and React Testing Library.',
+          'Implemented A/B experiments and analytics tracking for search interactions to support data-driven product decisions.',
+          'Built search features such as destination autosuggest, a flexible-date calendar, recent searches and market-specific deeplinks.',
+          'Helped maintain release tooling and code quality: Changesets, Renovate, Nx upgrades, CI pipeline fixes and TypeDoc.',
           'Improved daily development, debugging and prototyping with AI tools such as GitHub Copilot and Claude.',
         ],
         tags: lmTags,
@@ -205,7 +209,7 @@ const en: Content = {
     title: 'My toolbox',
     groups: [
       { group: 'Core', items: ['JavaScript', 'TypeScript', 'React', 'Next.js', 'React Native', 'Expo', 'Node.js'] },
-      { group: 'UI & Styling', items: ['Material UI', 'Emotion', 'UI/UX', 'Figma', 'Storybook'] },
+      { group: 'UI & Styling', items: ['Material UI', 'Emotion', 'Styled Components', 'UI/UX', 'Figma', 'Storybook'] },
       { group: 'State & Data', items: ['Redux', 'Zustand', 'TanStack Query', 'REST API', 'Supabase', 'SSR', 'CSR'] },
       { group: 'Testing', items: ['Jest', 'Playwright', 'React Testing Library', 'E2E testing'] },
       { group: 'Tooling', items: ['Vite', 'Webpack', 'Turbopack', 'Nx', 'CI/CD', 'Git & monorepos', 'Custom CMS'] },
@@ -271,10 +275,14 @@ const pl: Content = {
         company: 'lastminute.com',
         place: 'Szczecin, Polska',
         points: [
-          'Współtworzyłam wydajny ekosystem wyszukiwania oraz widżet dla lastminute.com, weg.de, bravofly.com i rumbo.com.',
+          'Współtworzyłam wspólny widżet wyszukiwania (loty, hotele, pociągi, wakacje pakietowe) używany na lastminute.com, weg.de, bravofly.com i rumbo.com, dystrybuowany jako paczka npm i bundle CDN z obsługą SSR.',
           'Tworzyłam reużywalne komponenty React i współtworzyłam hybrydowe architektury (SSR/CSR) zintegrowane z REST API.',
-          'Współtworzyłam dostępne interfejsy w Material UI zgodne z Europejskim Aktem o Dostępności (EAA).',
-          'Współtworzyłam pipeline’y testów E2E i jednostkowych (Playwright, Jest), które dbają o jakość i stabilność systemu.',
+          'Migrowałam kluczowe komponenty UI z Emotion na Styled Components, zachowując publiczne API i kontrakty z aplikacjami korzystającymi z widżetu.',
+          'Współtworzyłam dostępne interfejsy (EAA/WCAG): komunikaty ARIA live, zarządzanie fokusem przy błędach walidacji, atrybut inert dla modali i dostępne kontrolki formularzy.',
+          'Migrowałam starsze testy E2E do Playwright i rozszerzałam pokrycie testami jednostkowymi i integracyjnymi (Jest, React Testing Library).',
+          'Wdrażałam testy A/B i tracking analityczny interakcji z wyszukiwarką, wspierając decyzje produktowe oparte na danych.',
+          'Tworzyłam funkcje wyszukiwarki: podpowiedzi destynacji, kalendarz z elastycznymi datami, ostatnie wyszukiwania i deeplinki dla różnych rynków.',
+          'Pomagałam utrzymywać narzędzia wydawnicze i jakość kodu: Changesets, Renovate, aktualizacje Nx, poprawki pipeline’ów CI i TypeDoc.',
           'Usprawniłam codzienną pracę, debugowanie i prototypowanie dzięki narzędziom AI, takim jak GitHub Copilot i Claude.',
         ],
         tags: lmTags,
@@ -341,7 +349,7 @@ const pl: Content = {
     title: 'Moje narzędzia',
     groups: [
       { group: 'Fundamenty', items: ['JavaScript', 'TypeScript', 'React', 'Next.js', 'React Native', 'Expo', 'Node.js'] },
-      { group: 'UI i stylowanie', items: ['Material UI', 'Emotion', 'UI/UX', 'Figma', 'Storybook'] },
+      { group: 'UI i stylowanie', items: ['Material UI', 'Emotion', 'Styled Components', 'UI/UX', 'Figma', 'Storybook'] },
       { group: 'Stan i dane', items: ['Redux', 'Zustand', 'TanStack Query', 'REST API', 'Supabase', 'SSR', 'CSR'] },
       { group: 'Testowanie', items: ['Jest', 'Playwright', 'React Testing Library', 'Testy E2E'] },
       { group: 'Narzędzia', items: ['Vite', 'Webpack', 'Turbopack', 'Nx', 'CI/CD', 'Git i monorepo', 'Własny CMS'] },
@@ -407,10 +415,14 @@ const uk: Content = {
         company: 'lastminute.com',
         place: 'Щецин, Польща',
         points: [
-          'Брала участь у створенні високопродуктивної пошукової екосистеми та віджета для lastminute.com, weg.de, bravofly.com і rumbo.com.',
+          'Брала участь у створенні спільного пошукового віджета (авіаквитки, готелі, потяги, пакетні тури), який використовується на lastminute.com, weg.de, bravofly.com і rumbo.com та поширюється як npm-пакет і CDN-бандл із підтримкою SSR.',
           'Створювала багаторазові React-компоненти та брала участь у розробці гібридних (SSR/CSR) архітектур з інтеграцією REST API.',
-          'Разом із командою створювала доступні інтерфейси на Material UI відповідно до Європейського акта про доступність (EAA).',
-          'Брала участь у налаштуванні пайплайнів E2E- та юніт-тестування (Playwright, Jest) для підтримки якості й стабільності.',
+          'Мігрувала ключові UI-компоненти з Emotion на Styled Components, зберігаючи публічне API та контракти із застосунками-споживачами.',
+          'Разом із командою створювала доступні інтерфейси (EAA/WCAG): ARIA live-оголошення, керування фокусом при помилках валідації, атрибут inert для модальних вікон і доступні елементи форм.',
+          'Мігрувала застарілі E2E-тести на Playwright і розширювала покриття юніт- та інтеграційними тестами (Jest, React Testing Library).',
+          'Впроваджувала A/B-тести та аналітичний трекінг взаємодій із пошуком для ухвалення продуктових рішень на основі даних.',
+          'Розробляла функції пошуку: підказки напрямків, календар із гнучкими датами, нещодавні пошуки та діплінки для різних ринків.',
+          'Допомагала підтримувати інструменти релізів і якість коду: Changesets, Renovate, оновлення Nx, виправлення CI-пайплайнів, TypeDoc.',
           'Покращила щоденну розробку, налагодження та прототипування завдяки AI-інструментам — GitHub Copilot і Claude.',
         ],
         tags: lmTags,
@@ -477,7 +489,7 @@ const uk: Content = {
     title: 'Мої інструменти',
     groups: [
       { group: 'Основа', items: ['JavaScript', 'TypeScript', 'React', 'Next.js', 'React Native', 'Expo', 'Node.js'] },
-      { group: 'UI та стилі', items: ['Material UI', 'Emotion', 'UI/UX', 'Figma', 'Storybook'] },
+      { group: 'UI та стилі', items: ['Material UI', 'Emotion', 'Styled Components', 'UI/UX', 'Figma', 'Storybook'] },
       { group: 'Стан і дані', items: ['Redux', 'Zustand', 'TanStack Query', 'REST API', 'Supabase', 'SSR', 'CSR'] },
       { group: 'Тестування', items: ['Jest', 'Playwright', 'React Testing Library', 'E2E-тестування'] },
       { group: 'Інструменти', items: ['Vite', 'Webpack', 'Turbopack', 'Nx', 'CI/CD', 'Git і монорепозиторії', 'Власна CMS'] },
