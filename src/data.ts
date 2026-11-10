@@ -93,7 +93,7 @@ const en: Content = {
     firstName: 'Halyna',
     roles: ['Frontend Developer', 'React & TypeScript', 'Accessibility advocate', 'SSR / CSR architect'],
     tagline:
-      "I build fast, accessible interfaces for high-traffic products — for five years I've worked on search experiences used by millions of travellers across Europe.",
+      "I build fast, accessible interfaces for high-traffic products — for the past five years I developed a search platform used by millions of travellers across Europe.",
     ctaWork: 'See my work',
     ctaContact: 'Get in touch',
     location: 'Szczecin, Poland',
@@ -101,7 +101,7 @@ const en: Content = {
   about: {
     title: 'A bit about me',
     paragraphs: [
-      'Resourceful Frontend Developer with 5 years of experience building high-performance, accessible user interfaces for high-traffic platforms. I work daily with React, TypeScript and Material UI, and I am comfortable across hybrid SSR/CSR architectures and REST APIs.',
+      'Resourceful Frontend Developer with 5 years of experience building high-performance, accessible user interfaces for high-traffic platforms. I worked daily with React, TypeScript and Material UI, and I am comfortable across hybrid SSR/CSR architectures and REST APIs.',
       'I care about code that lasts: I set up E2E and unit testing pipelines with Playwright and Jest, and I design UIs to meet the European Accessibility Act. I also use AI tools like GitHub Copilot and Claude to speed up prototyping, debugging and everyday development.',
       'Before tech I worked in finance and tendering — which taught me precision, deadlines and how to talk to the business side of a product.',
     ],
@@ -215,7 +215,7 @@ const pl: Content = {
     firstName: 'Halyna',
     roles: ['Frontend Developer', 'React & TypeScript', 'Dostępność (a11y)', 'Architektura SSR / CSR'],
     tagline:
-      'Tworzę szybkie i dostępne interfejsy dla produktów o dużym ruchu — od pięciu lat pracuję nad wyszukiwarkami, z których korzystają miliony podróżnych w całej Europie.',
+      'Tworzę szybkie i dostępne interfejsy dla produktów o dużym ruchu — przez ostatnie pięć lat rozwijałam wyszukiwarkę, z której korzystają miliony podróżnych w całej Europie.',
     ctaWork: 'Zobacz projekty',
     ctaContact: 'Napisz do mnie',
     location: 'Szczecin, Polska',
@@ -223,7 +223,7 @@ const pl: Content = {
   about: {
     title: 'Kilka słów o mnie',
     paragraphs: [
-      'Jestem Frontend Developerką z 5-letnim doświadczeniem w tworzeniu wydajnych i dostępnych interfejsów dla platform o dużym ruchu. Na co dzień pracuję z React, TypeScript i Material UI, swobodnie poruszam się w hybrydowych architekturach SSR/CSR i integracjach z REST API.',
+      'Jestem Frontend Developerką z 5-letnim doświadczeniem w tworzeniu wydajnych i dostępnych interfejsów dla platform o dużym ruchu. Na co dzień pracowałam z React, TypeScript i Material UI, swobodnie poruszam się w hybrydowych architekturach SSR/CSR i integracjach z REST API.',
       'Dbam o kod, który przetrwa: buduję pipeline’y testów E2E i jednostkowych w Playwright i Jest, a interfejsy projektuję zgodnie z Europejskim Aktem o Dostępności (EAA). Korzystam też z narzędzi AI, takich jak GitHub Copilot i Claude, żeby szybciej prototypować, debugować i rozwijać kod.',
       'Zanim weszłam do IT, pracowałam w finansach i przetargach — to nauczyło mnie precyzji, dotrzymywania terminów i rozmowy z biznesową stroną produktu.',
     ],
@@ -337,7 +337,7 @@ const uk: Content = {
     firstName: 'Галина',
     roles: ['Frontend-розробниця', 'React & TypeScript', 'Доступність (a11y)', 'Архітектура SSR / CSR'],
     tagline:
-      'Створюю швидкі та доступні інтерфейси для високонавантажених продуктів — п’ять років працюю над пошуком, яким користуються мільйони мандрівників по всій Європі.',
+      'Створюю швидкі та доступні інтерфейси для високонавантажених продуктів — останні п’ять років я розвивала пошук, яким користуються мільйони мандрівників по всій Європі.',
     ctaWork: 'Мої проєкти',
     ctaContact: 'Зв’язатися',
     location: 'Щецин, Польща',
@@ -345,7 +345,7 @@ const uk: Content = {
   about: {
     title: 'Трохи про мене',
     paragraphs: [
-      'Я Frontend-розробниця з 5-річним досвідом створення продуктивних і доступних інтерфейсів для високонавантажених платформ. Щодня працюю з React, TypeScript і Material UI, впевнено орієнтуюся в гібридних архітектурах SSR/CSR та інтеграціях із REST API.',
+      'Я Frontend-розробниця з 5-річним досвідом створення продуктивних і доступних інтерфейсів для високонавантажених платформ. Щодня працювала з React, TypeScript і Material UI, впевнено орієнтуюся в гібридних архітектурах SSR/CSR та інтеграціях із REST API.',
       'Дбаю про код, який живе довго: налаштовую пайплайни E2E- та юніт-тестів на Playwright і Jest, а інтерфейси проєктую відповідно до Європейського акта про доступність (EAA). Також використовую AI-інструменти — GitHub Copilot і Claude, — щоб швидше прототипувати, налагоджувати й розробляти.',
       'До IT я працювала у фінансах і тендерах — це навчило мене точності, дотримання дедлайнів і вміння говорити мовою бізнесу.',
     ],
