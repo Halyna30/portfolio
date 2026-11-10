@@ -1,9 +1,12 @@
 import Section, { Reveal, Tag } from './Section'
-import { education, jobs } from '../data'
+import { useI18n } from '../i18n'
 
 export default function Experience() {
+  const { t } = useI18n()
+  const { jobs, education } = t.experience
+
   return (
-    <Section id="experience" index="02" kicker="experience" title="Where I've worked">
+    <Section id="experience" index="02" kicker={t.nav.experience.toLowerCase()} title={t.experience.title}>
       <div className="grid gap-12 lg:grid-cols-[1.5fr_1fr]">
         <ol className="relative space-y-6 border-l border-line pl-6 sm:pl-8">
           {jobs.map((job, i) => (
@@ -46,11 +49,11 @@ export default function Experience() {
 
         <div>
           <Reveal>
-            <h3 className="font-mono text-sm text-accent">education</h3>
+            <h3 className="font-mono text-sm text-accent">{t.experience.educationTitle}</h3>
           </Reveal>
           <div className="mt-5 space-y-4">
             {education.map((e, i) => (
-              <Reveal key={e.title} delay={i * 80} className="rounded-2xl border border-line bg-panel p-6">
+              <Reveal key={e.period} delay={i * 80} className="rounded-2xl border border-line bg-panel p-6">
                 <p className="font-mono text-xs text-muted">{e.period}</p>
                 <h4 className="mt-2 font-display text-lg font-semibold">{e.title}</h4>
                 <p className="mt-1 text-sm text-text">{e.school}</p>

@@ -13,7 +13,9 @@ Open http://localhost:5173
 
 ## Editing content
 
-All text (experience, skills, work, contact) lives in [`src/data.ts`](src/data.ts).
+All text (experience, skills, work, contact) lives in [`src/data.ts`](src/data.ts),
+translated into English (`en`), Polish (`pl`) and Ukrainian (`uk`). The site picks the
+visitor's browser language and remembers the choice made in the EN / PL / UA switcher.
 The downloadable CV is `public/Halyna-Pryn-CV.pdf` — replace the file to update it.
 
 ## Structure

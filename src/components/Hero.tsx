@@ -1,11 +1,18 @@
 import { useEffect, useState } from 'react'
-import { profile } from '../data'
+import { useI18n } from '../i18n'
 
 // Types out each role, pauses, deletes it, then moves on to the next.
 function useTypewriter(words: string[]) {
   const [text, setText] = useState('')
   const [i, setI] = useState(0)
   const [deleting, setDeleting] = useState(false)
+
+  // Start over when the word list changes (language switch).
+  useEffect(() => {
+    setText('')
+    setI(0)
+    setDeleting(false)
+  }, [words])
 
   useEffect(() => {
     const word = words[i % words.length]
@@ -57,45 +64,47 @@ function CodeCard() {
 }
 
 export default function Hero() {
-  const typed = useTypewriter(profile.roles)
+  const { t } = useI18n()
+  const hero = t.hero
+  const typed = useTypewriter(hero.roles)
 
   return (
     <section id="top" className="mx-auto grid min-h-svh max-w-6xl items-center gap-14 px-4 pt-28 pb-16 sm:px-6 lg:grid-cols-[1.15fr_1fr]">
       <div>
         <p className="inline-flex items-center gap-2 rounded-full border border-mint/30 bg-mint/10 px-3 py-1 font-mono text-xs text-mint">
           <span className="h-2 w-2 animate-pulse rounded-full bg-mint" />
-          Open to new opportunities
+          {hero.badge}
         </p>
 
         <h1 className="mt-6 font-display text-5xl font-bold leading-[1.05] tracking-tight sm:text-7xl">
-          Hi, I'm {profile.firstName}
+          {hero.greeting} {hero.firstName}
           <span className="text-accent">.</span>
         </h1>
 
-        <p className="mt-5 h-8 font-mono text-lg text-muted sm:text-xl" aria-label={profile.roles.join(', ')}>
+        <p className="mt-5 h-8 font-mono text-lg text-muted sm:text-xl" aria-label={hero.roles.join(', ')}>
           <span className="text-accent">&gt;</span> {typed}
           <span className="caret" aria-hidden />
         </p>
 
-        <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted">{profile.tagline}</p>
+        <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted">{hero.tagline}</p>
 
         <div className="mt-9 flex flex-wrap gap-3">
           <a
             href="#work"
             className="rounded-xl bg-accent px-6 py-3 font-medium text-ink transition-transform hover:-translate-y-0.5"
           >
-            See my work
+            {hero.ctaWork}
           </a>
           <a
             href="#contact"
             className="rounded-xl border border-line px-6 py-3 font-medium transition-colors hover:border-text"
           >
-            Get in touch
+            {hero.ctaContact}
           </a>
         </div>
 
         <p className="mt-10 font-mono text-xs text-muted">
-          📍 {profile.location} · UA / PL / EN
+          📍 {hero.location} · UA / PL / EN
         </p>
       </div>
 

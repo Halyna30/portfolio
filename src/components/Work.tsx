@@ -1,12 +1,14 @@
 import Section, { Reveal, Tag } from './Section'
-import { work } from '../data'
+import { useI18n } from '../i18n'
 
 export default function Work() {
+  const { t } = useI18n()
+
   return (
-    <Section id="work" index="03" kicker="work" title="What I've built">
+    <Section id="work" index="03" kicker={t.nav.work.toLowerCase()} title={t.work.title}>
       <div className="grid gap-5 md:grid-cols-2">
-        {work.map((w, i) => (
-          <Reveal key={w.title} delay={(i % 2) * 100}>
+        {t.work.items.map((w, i) => (
+          <Reveal key={i} delay={(i % 2) * 100}>
             <article className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-line bg-panel p-7 transition-colors hover:border-accent/40">
               <div className="pointer-events-none absolute -top-20 -right-20 h-48 w-48 rounded-full bg-accent/10 opacity-0 blur-3xl transition-opacity group-hover:opacity-100" />
               <p className="font-mono text-xs text-accent">{w.kicker}</p>

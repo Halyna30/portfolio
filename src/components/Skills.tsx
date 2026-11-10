@@ -1,12 +1,14 @@
 import Section, { Reveal } from './Section'
-import { skills } from '../data'
+import { useI18n } from '../i18n'
 
 export default function Skills() {
+  const { t } = useI18n()
+
   return (
-    <Section id="skills" index="04" kicker="skills" title="My toolbox">
+    <Section id="skills" index="04" kicker={t.nav.skills.toLowerCase()} title={t.skills.title}>
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-        {skills.map((s, i) => (
-          <Reveal key={s.group} delay={(i % 3) * 80} className="rounded-2xl border border-line bg-panel p-6">
+        {t.skills.groups.map((s, i) => (
+          <Reveal key={i} delay={(i % 3) * 80} className="rounded-2xl border border-line bg-panel p-6">
             <h3 className="font-mono text-sm text-accent">
               <span className="text-muted">{'// '}</span>
               {s.group}

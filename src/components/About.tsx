@@ -1,20 +1,23 @@
 import Section, { Reveal } from './Section'
-import { about, languages, stats } from '../data'
+import { useI18n } from '../i18n'
 
 export default function About() {
+  const { t } = useI18n()
+  const about = t.about
+
   return (
-    <Section id="about" index="01" kicker="about" title="A bit about me">
+    <Section id="about" index="01" kicker={t.nav.about.toLowerCase()} title={about.title}>
       <div className="grid gap-10 lg:grid-cols-[1.4fr_1fr]">
         <Reveal className="space-y-5 text-lg leading-relaxed text-muted">
-          {about.map((p) => (
-            <p key={p.slice(0, 20)}>{p}</p>
+          {about.paragraphs.map((p, i) => (
+            <p key={i}>{p}</p>
           ))}
         </Reveal>
 
         <Reveal delay={120} className="rounded-2xl border border-line bg-panel p-6">
-          <h3 className="font-mono text-sm text-accent">languages</h3>
+          <h3 className="font-mono text-sm text-accent">{about.languagesTitle}</h3>
           <ul className="mt-5 space-y-4">
-            {languages.map((l) => (
+            {about.languages.map((l) => (
               <li key={l.name}>
                 <div className="flex justify-between text-sm">
                   <span>{l.name}</span>
@@ -30,8 +33,8 @@ export default function About() {
       </div>
 
       <div className="mt-10 grid grid-cols-2 gap-4 lg:grid-cols-4">
-        {stats.map((s, i) => (
-          <Reveal key={s.label} delay={i * 80} className="rounded-2xl border border-line bg-panel p-6">
+        {about.stats.map((s, i) => (
+          <Reveal key={i} delay={i * 80} className="rounded-2xl border border-line bg-panel p-6">
             <p className="font-display text-4xl font-bold">
               {s.value}
               <span className="text-xl text-accent">{s.suffix}</span>
