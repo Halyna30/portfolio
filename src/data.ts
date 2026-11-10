@@ -151,7 +151,7 @@ const en: Content = {
     ],
   },
   work: {
-    title: "What I've built",
+    title: "What I've worked on",
     items: [
       {
         kicker: '01 · Search',
@@ -273,7 +273,7 @@ const pl: Content = {
     ],
   },
   work: {
-    title: 'Co zbudowałam',
+    title: 'Nad czym pracowałam',
     items: [
       {
         kicker: '01 · Wyszukiwarka',
@@ -395,7 +395,7 @@ const uk: Content = {
     ],
   },
   work: {
-    title: 'Що я створила',
+    title: 'Над чим я працювала',
     items: [
       {
         kicker: '01 · Пошук',
