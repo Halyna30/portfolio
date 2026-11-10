@@ -56,6 +56,7 @@ export type Content = {
   }
   work: {
     title: string
+    pet: { badge: string; subtitle: string; text: string; points: string[]; status: string; link: string }
     items: { kicker: string; title: string; text: string; brands?: string[]; tags: string[] }[]
   }
   skills: { title: string; groups: { group: string; items: string[] }[] }
@@ -71,6 +72,12 @@ export type Content = {
     languages: string
   }
   footer: { builtWith: string }
+}
+
+export const petProject = {
+  name: 'Choreo',
+  url: 'https://github.com/Halyna30/choreo',
+  tags: ['React Native', 'Expo', 'TypeScript', 'Supabase', 'PostgreSQL RLS', 'TanStack Query', 'i18next'],
 }
 
 const brands = ['lastminute.com', 'weg.de', 'bravofly.com', 'rumbo.com']
@@ -152,6 +159,20 @@ const en: Content = {
   },
   work: {
     title: "What I've worked on",
+    pet: {
+      badge: 'Pet project · in progress',
+      subtitle: 'A shared daily task list for families',
+      text: 'A mobile app where parents plan tasks, kids tick them off and everyone sees progress in real time. Roles decide who can plan and who can only complete — and those rules are enforced by the database, not just by hidden buttons in the UI.',
+      points: [
+        'Groups with roles (owner, adult, child), one-time role-based invite codes and parent approval of finished tasks',
+        'Security in PostgreSQL Row Level Security policies and RPC functions on Supabase',
+        'Real-time sync and optimistic updates with rollback using TanStack Query',
+        'Recurring tasks, rewards (stars and claps), comments and avatars',
+        'Type-safe translations in 4 languages with plural rules',
+      ],
+      status: 'Android build via EAS · next: push notifications, tests, Google Play',
+      link: 'View on GitHub',
+    },
     items: [
       {
         kicker: '01 · Search',
@@ -183,9 +204,9 @@ const en: Content = {
   skills: {
     title: 'My toolbox',
     groups: [
-      { group: 'Core', items: ['JavaScript', 'TypeScript', 'React', 'Next.js', 'Node.js'] },
+      { group: 'Core', items: ['JavaScript', 'TypeScript', 'React', 'Next.js', 'React Native', 'Expo', 'Node.js'] },
       { group: 'UI & Styling', items: ['Material UI', 'Emotion', 'UI/UX', 'Figma', 'Storybook'] },
-      { group: 'State & Data', items: ['Redux', 'Zustand', 'REST API', 'SSR', 'CSR'] },
+      { group: 'State & Data', items: ['Redux', 'Zustand', 'TanStack Query', 'REST API', 'Supabase', 'SSR', 'CSR'] },
       { group: 'Testing', items: ['Jest', 'Playwright', 'React Testing Library', 'E2E testing'] },
       { group: 'Tooling', items: ['Vite', 'Webpack', 'Turbopack', 'Nx', 'CI/CD', 'Git & monorepos', 'Custom CMS'] },
       { group: 'AI-assisted dev', items: ['GitHub Copilot', 'Claude'] },
@@ -274,6 +295,20 @@ const pl: Content = {
   },
   work: {
     title: 'Nad czym pracowałam',
+    pet: {
+      badge: 'Projekt własny · w trakcie',
+      subtitle: 'Wspólna lista codziennych zadań dla rodzin',
+      text: 'Aplikacja mobilna, w której rodzice planują zadania, dzieci je odhaczają, a wszyscy widzą postępy w czasie rzeczywistym. Role decydują, kto może planować, a kto tylko wykonywać — i tych zasad pilnuje baza danych, a nie tylko ukryte przyciski w UI.',
+      points: [
+        'Grupy z rolami (właściciel, dorosły, dziecko), jednorazowe kody zaproszeń z przypisaną rolą i zatwierdzanie wykonanych zadań przez rodzica',
+        'Bezpieczeństwo w politykach Row Level Security i funkcjach RPC w PostgreSQL (Supabase)',
+        'Synchronizacja w czasie rzeczywistym i optymistyczne aktualizacje z wycofaniem zmian w TanStack Query',
+        'Zadania cykliczne, nagrody (gwiazdki i brawa), komentarze i awatary',
+        'Typowane tłumaczenia w 4 językach z obsługą form liczby mnogiej',
+      ],
+      status: 'Build na Androida przez EAS · dalej: powiadomienia push, testy, Google Play',
+      link: 'Zobacz na GitHubie',
+    },
     items: [
       {
         kicker: '01 · Wyszukiwarka',
@@ -305,9 +340,9 @@ const pl: Content = {
   skills: {
     title: 'Moje narzędzia',
     groups: [
-      { group: 'Fundamenty', items: ['JavaScript', 'TypeScript', 'React', 'Next.js', 'Node.js'] },
+      { group: 'Fundamenty', items: ['JavaScript', 'TypeScript', 'React', 'Next.js', 'React Native', 'Expo', 'Node.js'] },
       { group: 'UI i stylowanie', items: ['Material UI', 'Emotion', 'UI/UX', 'Figma', 'Storybook'] },
-      { group: 'Stan i dane', items: ['Redux', 'Zustand', 'REST API', 'SSR', 'CSR'] },
+      { group: 'Stan i dane', items: ['Redux', 'Zustand', 'TanStack Query', 'REST API', 'Supabase', 'SSR', 'CSR'] },
       { group: 'Testowanie', items: ['Jest', 'Playwright', 'React Testing Library', 'Testy E2E'] },
       { group: 'Narzędzia', items: ['Vite', 'Webpack', 'Turbopack', 'Nx', 'CI/CD', 'Git i monorepo', 'Własny CMS'] },
       { group: 'Praca z AI', items: ['GitHub Copilot', 'Claude'] },
@@ -396,6 +431,20 @@ const uk: Content = {
   },
   work: {
     title: 'Над чим я працювала',
+    pet: {
+      badge: 'Pet-проєкт · у розробці',
+      subtitle: 'Спільний список щоденних справ для родини',
+      text: 'Мобільний застосунок, у якому батьки планують завдання, діти їх відмічають, а всі бачать прогрес у реальному часі. Ролі визначають, хто може планувати, а хто лише виконувати, — і ці правила контролює база даних, а не лише приховані кнопки в UI.',
+      points: [
+        'Групи з ролями (власник, дорослий, дитина), одноразові коди запрошень із роллю та підтвердження виконаних завдань батьками',
+        'Безпека на рівні PostgreSQL: політики Row Level Security та RPC-функції в Supabase',
+        'Синхронізація в реальному часі та оптимістичні оновлення з відкатом у TanStack Query',
+        'Повторювані завдання, нагороди (зірочки й оплески), коментарі та аватари',
+        'Типізовані переклади 4 мовами з підтримкою форм множини',
+      ],
+      status: 'Android-збірка через EAS · далі: push-сповіщення, тести, Google Play',
+      link: 'Переглянути на GitHub',
+    },
     items: [
       {
         kicker: '01 · Пошук',
@@ -427,9 +476,9 @@ const uk: Content = {
   skills: {
     title: 'Мої інструменти',
     groups: [
-      { group: 'Основа', items: ['JavaScript', 'TypeScript', 'React', 'Next.js', 'Node.js'] },
+      { group: 'Основа', items: ['JavaScript', 'TypeScript', 'React', 'Next.js', 'React Native', 'Expo', 'Node.js'] },
       { group: 'UI та стилі', items: ['Material UI', 'Emotion', 'UI/UX', 'Figma', 'Storybook'] },
-      { group: 'Стан і дані', items: ['Redux', 'Zustand', 'REST API', 'SSR', 'CSR'] },
+      { group: 'Стан і дані', items: ['Redux', 'Zustand', 'TanStack Query', 'REST API', 'Supabase', 'SSR', 'CSR'] },
       { group: 'Тестування', items: ['Jest', 'Playwright', 'React Testing Library', 'E2E-тестування'] },
       { group: 'Інструменти', items: ['Vite', 'Webpack', 'Turbopack', 'Nx', 'CI/CD', 'Git і монорепозиторії', 'Власна CMS'] },
       { group: 'Розробка з AI', items: ['GitHub Copilot', 'Claude'] },
