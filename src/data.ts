@@ -93,7 +93,7 @@ const en: Content = {
     firstName: 'Halyna',
     roles: ['Frontend Developer', 'React & TypeScript', 'Accessibility advocate', 'SSR / CSR architect'],
     tagline:
-      'I build fast, accessible interfaces for high-traffic products — for five years I've worked on search experiences used by millions of travellers across Europe.',
+      "I build fast, accessible interfaces for high-traffic products — for five years I've worked on search experiences used by millions of travellers across Europe.",
     ctaWork: 'See my work',
     ctaContact: 'Get in touch',
     location: 'Szczecin, Poland',
